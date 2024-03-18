@@ -61,6 +61,13 @@ flutter:
     - img/first_page.png
     - img/second_page.png
     - img/third_page.png
+    - img/istanbul.jpeg
+    - img/horse.png
+    - img/diving.png
+    - img/archery.png
+    - img/rafting.png
+    - img/paris.png
+    - img/machu.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
