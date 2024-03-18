@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oua_app/widgets/app_large_text.dart';
 import 'package:oua_app/widgets/app_text.dart';
+import 'package:oua_app/widgets/responsive_button.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -36,11 +37,12 @@ class _WelcomePageState extends State<WelcomePage> {
               child: Container(
                 margin: const EdgeInsets.only(top:75, left:30, right: 20),
                 child: Row (
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        AppLargeText(text: "Geziler"),
+                        AppLargeText(text: "Yerel Gezgin"),
                         AppText(text: "Keşfetmeye Hazır Mısın?"),
                         SizedBox(height: 10,),
                         Container(
@@ -49,8 +51,26 @@ class _WelcomePageState extends State<WelcomePage> {
                             text:"Dünyayı Keşfet,Sevdiklerinle Seyahat Et ve Hatıralarını Paylaş.", size: 16,
                             color: Colors.black54
                           ),
-                        )
+                        ),
+                        SizedBox(height: 20,),
+                        ResponsiveButton(
+                          width:110,
+                          buttonText: "Başla",)
                       ],
+                    ),
+                    Column(
+                      children: List.generate(3, (indexDots) {
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 2),
+                          width: 8,
+                          height: index==indexDots?25:8,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: index==indexDots?Colors.blueAccent:Colors.blueAccent.withOpacity(0.5)
+                            ),
+                        );
+                      },
+                      )
                     )
                   ],
                 )
